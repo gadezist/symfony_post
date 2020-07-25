@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hello World</h1>
+    {% for post in postAll %}
+        <img width="200px" src="{{ asset(images_path ~ post.titleImage) }}">
+        <div>
+            {{ post.title }}
+        </div>
+        <div>
+            {{ post.text }}
+        </div>
+        <div>
+            {{ post.createdAt|date("Y.m.d H:m:s") }}
+        </div>
+        <div>
+            {{ post.author }}
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
