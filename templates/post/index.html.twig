@@ -5,7 +5,7 @@
     {% for post in postAll %}
         <img width="200px" src="{{ asset(images_path ~ post.titleImage) }}">
         <div>
-            {{ post.title }}
+            <h3>{{ post.title }}</h3>
         </div>
         <div>
             {{ post.text }}
